@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cobweeb Bot - Feed Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 3rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .login-container h1 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+
+        .login-container p {
+            color: #999;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .features-list {
+            text-align: left;
+            margin-bottom: 2rem;
+            background: #f5f7ff;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .features-list li {
+            list-style: none;
+            margin-bottom: 0.8rem;
+            color: #555;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .discord-login-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            width: 100%;
+            padding: 1rem;
+            background: #5865F2;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .discord-login-btn:hover {
+            background: #4752C4;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(88, 101, 242, 0.3);
+        }
+
+        .discord-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        .footer-text {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        .footer-text a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">🕷️</div>
+        <h1>Cobweeb Bot</h1>
+        <p>Zarządzaj feedami mediów społecznych na Discordzie</p>
+
+        <ul class="features-list">
+            <li>Monitoruj Twitter, Instagram, TikTok i więcej</li>
+            <li>Automatyczne powiadomienia na Discord</li>
+            <li>Łatwa konfiguracja webhooków</li>
+            <li>Wielokrotne feedy na jednym serwerze</li>
+        </ul>
+
+        <a href="/auth/discord" class="discord-login-btn">
+            <svg class="discord-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.317 4.3671a19.8062 19.8062 0 00-4.8851-1.5152.074.074 0 00-.0782.0368c-.211.3665-.444.8431-.607 1.2209.6018-.0905 1.1924-.2179 1.7695-.3722a.073.073 0 00.0383.1276 19.7463 19.7463 0 01-4.6121 2.7432.0727.0727 0 00-.0364.0293c-1.3159.6097-2.6779 1.4582-4.008 2.5397a.0731.0731 0 00-.0137.0754 20.1333 20.1333 0 003.0421 6.1624.073.073 0 00.0706.0402c1.137-.4283 2.2077-.9644 3.1815-1.5847a.0728.0728 0 00.0734-.1148 14.726 14.726 0 01-2.0624-1.3147.0729.0729 0 01.0098-.1276c.5482.4084 1.0965.8092 1.6117 1.1744a.073.073 0 00.0788-.0102 13.827 13.827 0 003.7995 1.3456.073.073 0 00.0652-.0624c.3782-1.2207.5906-2.5062.5906-3.8216 0-.0558-.0029-.1108-.0086-.1652a.073.073 0 01.0268-.0583z"/>
+            </svg>
+            Login with Discord
+        </a>
+
+        <div class="footer-text">
+            <p>Bezpieczne logowanie poprzez Discord OAuth 2.0</p>
+            <p><a href="https://github.com/multivers0/cobweeb-bot" target="_blank">GitHub</a> • <a href="#">Dokumentacja</a> • <a href="#">Support</a></p>
+        </div>
+    </div>
+</body>
+</html>
